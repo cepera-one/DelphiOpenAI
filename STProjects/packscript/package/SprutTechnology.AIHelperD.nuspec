@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>SprutTechnology.AIHelperD</id>
+    <version>1.0.0</version>
+    <title>SprutTechnology.AIHelperD</title>
+    <authors>cepera@sprutcam.com</authors>
+    <owners>cepera@sprutcam.com</owners>
+    <description>
+    AIHelperD.dll library to be possible to interact with OpenAI API in Delphi directly
+    https://github.com/cepera-one/DelphiOpenAI.git
+    </description>
+    <releaseNotes></releaseNotes>
+    <language>en-US</language>
+    <copyright></copyright>
+    <dependencies></dependencies>
+    <references></references>
+  </metadata>
+</package>

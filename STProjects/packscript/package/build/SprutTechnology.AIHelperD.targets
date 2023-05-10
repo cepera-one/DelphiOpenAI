@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <!-- Что копировать в пакет -->
+    <ItemGroup>
+        <ProjectBIN Include="$(MSBuildThisFileDirectory)bin/*" />
+    </ItemGroup>
+    <!-- Куда распоковать при билде -->
+    <Target Name="ExplodeTarget" AfterTargets="Build">
+        <Copy SourceFiles="@(ProjectBIN)" DestinationFolder="$(OutDir)" />
+    </Target>
+</Project>
