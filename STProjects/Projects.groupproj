@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{797E4C8A-6A71-45C7-8EC3-5D67E145A7F2}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="lib\main\src\AIHelperD.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="lib\tests\src\AIHelperDTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="AIHelperD">
+        <MSBuild Projects="lib\main\src\AIHelperD.dproj"/>
+    </Target>
+    <Target Name="AIHelperD:Clean">
+        <MSBuild Projects="lib\main\src\AIHelperD.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AIHelperD:Make">
+        <MSBuild Projects="lib\main\src\AIHelperD.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AIHelperDTests">
+        <MSBuild Projects="lib\tests\src\AIHelperDTests.dproj"/>
+    </Target>
+    <Target Name="AIHelperDTests:Clean">
+        <MSBuild Projects="lib\tests\src\AIHelperDTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AIHelperDTests:Make">
+        <MSBuild Projects="lib\tests\src\AIHelperDTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="AIHelperD;AIHelperDTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="AIHelperD:Clean;AIHelperDTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="AIHelperD:Make;AIHelperDTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
