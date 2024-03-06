@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package>
   <metadata>
-    <id>SprutTechnology.AIHelperD</id>
+    <id>SprutCAMTech.AIHelperD</id>
     <version>1.0.0</version>
-    <title>SprutTechnology.AIHelperD</title>
+    <title>SprutCAMTech.AIHelperD</title>
     <authors>cepera@sprutcam.com</authors>
     <owners>cepera@sprutcam.com</owners>
     <description>
